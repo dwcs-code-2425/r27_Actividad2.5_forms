@@ -49,11 +49,11 @@
     if(isset($_GET["prendas"])){
         $prendas = $_GET["prendas"];
         foreach($prendas as $prenda){
-            echo "<p>Prenda seleccionada: $prenda</p>";
+            echo "<p>Prenda seleccionada:". htmlspecialchars($prenda)."</p>";
         }
     }
     if(isset($_GET["color"])){
-        $color= $_GET["color"];
+        $color= htmlspecialchars($_GET["color"]);
         echo "<p> El color seleccionado es <span style='background-color:$color'>$color</span></p>";
     }
 
